@@ -1,0 +1,51 @@
+@import 'resets';
+
+.hero-section {
+	height: 100vh;
+
+	.container {
+		@include width-mixin();
+		height: 100%;
+		position: relative;
+
+		.wrap {
+			text-align: center;
+
+			.heading {
+				margin-bottom: 0.5em;
+				color: $colorTextPrimary;
+			}
+
+			.text {
+				line-height: $textLineHeight;
+				margin-bottom: 2.5em;
+				color: $colorTextSecondary;
+			}
+
+			.btn-wrap {
+				.btn {
+					@include btn-mixin();
+					background: $accent-color;
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			.wrap {
+				position: absolute;
+				top: 10%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 800px;
+
+				.heading {
+					font-size: 3.5rem;
+				}
+
+				.text {
+					padding: 0 4em;
+				}
+			}
+		}
+	}
+}
