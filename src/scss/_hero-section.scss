@@ -1,49 +1,154 @@
 @import 'resets';
 
 .hero-section {
-	height: 100vh;
+	height: 150vh;
+	position: relative;
+	width: 100%;
+	margin-bottom: 10em;
+	background: $darK;
+	padding-top: 8em;
+	border-radius: 0 0 40px 40px;
+
+	@media screen and (min-width: 62em) {
+		margin-bottom: 12em;
+		border-radius: 0 0 70px 70px;
+		height: 167vh;
+	}
+
+	#first-positioned-ast {
+		height: 100px;
+		width: 100px;
+		position: absolute;
+		top: 0;
+		right: 10%;
+
+		.img {
+			width: 100%;
+		}
+
+		@media screen and (min-width: 62em) {
+			right: 20%;
+			height: 160px;
+			width: 160px;
+		}
+	}
 
 	.container {
 		@include width-mixin();
-		height: 100%;
-		position: relative;
 
 		.wrap {
-			text-align: center;
+			margin-bottom: 4em;
 
 			.heading {
 				margin-bottom: 0.5em;
-				color: $colorTextPrimary;
+				color: $light;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 700;
+				max-width: 500px;
 			}
 
 			.text {
 				line-height: $textLineHeight;
 				margin-bottom: 2.5em;
-				color: $colorTextSecondary;
+				color: $light;
+				@include poppins-regular();
+				line-height: 1.8;
+				font-size: 15px;
+				max-width: 500px;
 			}
 
 			.btn-wrap {
-				.btn {
-					@include btn-mixin();
-					background: $accent-color;
+				.wrap {
+					.btn {
+						@include btn-mixin();
+						background: $accent-color;
+					}
+				}
+
+				.stat-proof {
+					display: flex;
+					gap: 0.5em;
+
+					.card {
+						background: #3e3e3e;
+						border-radius: 20px;
+						width: 100%;
+						padding-top: 1.6em;
+
+						.content {
+							text-align: center;
+
+							.heading {
+								@include poppins-semibold();
+								line-height: 1;
+								color: $accent-color;
+							}
+
+							.text {
+								@include poppins-regular();
+								font-size: 0.9rem;
+								line-height: 1.3;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.hero-img-wrap {
+			height: 350px;
+			width: 90%;
+			position: absolute;
+			left: 5%;
+			border-radius: 50px;
+
+			.hero-bg {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 40px;
+			}
+
+			@media screen and (min-width: 62em) {
+				height: 500px;
+				display: flex;
+
+				.hero-bg {
+					border-radius: 60px;
+					width: 80%;
+					margin: 0 auto;
 				}
 			}
 		}
 
 		@media screen and (min-width: 62em) {
 			.wrap {
-				position: absolute;
-				top: 10%;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 800px;
-
 				.heading {
-					font-size: 3.5rem;
+					font-size: 3rem;
+					max-width: 650px;
 				}
 
-				.text {
-					padding: 0 4em;
+				.btn-wrap {
+					display: flex;
+					justify-content: space-between;
+					width: 95%;
+
+					.stat-proof {
+						gap: 1em;
+
+						.card {
+							min-height: 100px;
+							width: 150px;
+
+							.heading {
+								font-size: 1.5rem;
+							}
+
+							.text {
+								padding: 0 1em;
+							}
+						}
+					}
 				}
 			}
 		}

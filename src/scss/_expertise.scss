@@ -1,0 +1,101 @@
+@import 'resets';
+
+.expertise-section {
+	padding-top: 2em;
+	margin-bottom: 5em;
+
+	.container {
+		@include width-mixin();
+
+		.text-wrap {
+			.heading-title {
+				font-family: 'Poppins', sans-serif;
+				font-weight: 700;
+				max-width: 500px;
+				font-size: 32px;
+				margin-bottom: 0.5em;
+				text-transform: capitalize;
+			}
+
+			.subhead {
+				@include text-mixin();
+				color: $colorTextPrimary;
+			}
+
+			.keypoints-wrap {
+				display: grid;
+				gap: 1em;
+
+				.card {
+					height: 300px;
+					width: 100%;
+					background: $darK;
+					border-radius: 40px;
+					position: relative;
+					overflow: hidden;
+					padding-top: 2em;
+
+					.icon-wrap {
+						position: absolute;
+						width: 100px;
+						right: -7%;
+						bottom: -6%;
+
+						.img {
+							height: 100%;
+							width: 100%;
+							object-fit: cover;
+						}
+					}
+
+					.heading {
+						font-size: 25px;
+						color: $accent-color;
+						width: 85%;
+						margin: 0 auto;
+						margin-bottom: 1em;
+					}
+
+					.text {
+						@include text-mixin();
+						color: $light;
+						width: 85%;
+						margin: 0 auto;
+					}
+				}
+
+				@media screen and (min-width: 43em) {
+					display: flex;
+				}
+
+				@media screen and (min-width: 62em) {
+					display: flex;
+					width: 80%;
+					margin: 0 auto;
+
+					.card {
+						padding: 2em 1.4em;
+					}
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				.heading-title {
+					margin: 0 auto 0.5em auto;
+					text-align: center;
+
+					@media screen and (min-width: 62em) {
+						font-size: 3rem;
+						max-width: 700px;
+					}
+				}
+
+				.subhead {
+					text-align: center;
+					max-width: 550px;
+					margin: 0 auto 4em auto;
+				}
+			}
+		}
+	}
+}

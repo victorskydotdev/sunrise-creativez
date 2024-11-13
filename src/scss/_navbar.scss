@@ -1,51 +1,72 @@
 @import 'resets';
 
 .header-nav {
-	height: 20vh;
-	display: flex;
-	align-items: center;
-	position: sticky;
+	height: 15vh;
+	width: 100%;
+	// position: sticky;
 	top: 0;
+	left: 0;
 	z-index: 5;
+	background: $darK;
 
 	.nav-container {
 		@include width-mixin();
-		width: 85%;
-		background: $light;
-
-		box-shadow: $box-shadow;
-		border-radius: $rounded;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
 
 		.brand-logo {
 			img {
-				width: 100px;
+				width: 150px;
 			}
 		}
 
 		.wrap {
+			background: $dominantColor;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			height: 80vh;
+			width: 100%;
+			padding: 1.5em 2em;
+			display: none;
+
 			.nav-links {
+				display: grid;
+
 				.link {
 					a {
-						color: $textColorSecondary;
-					}
-
-					.link-btn {
-						padding: 10px 15px;
-						border-radius: 10px;
-						background: teal;
+						@include poppins-regular();
+						color: $light;
 					}
 				}
 			}
 
 			.btn-wrap {
-				.link {
-					border: none;
-					background: transparent;
+				display: flex;
+				flex-direction: column;
+				gap: 2em;
 
-					a {
-						@include btn-mixin();
-					}
-				}
+				// .link-btn {
+				// 	@include btn-mixin();
+				// }
+			}
+		}
+
+		.hamburger {
+			background: $dominantColor;
+			height: 40px;
+			width: 40px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.block {
+				height: 20px;
+				width: 20px;
+				background: $accent-color;
 			}
 		}
 
@@ -54,22 +75,53 @@
 			justify-content: space-between;
 			align-items: center;
 			height: 80px;
-			padding: 0 2em;
+			padding: 3em 2em;
 
 			.wrap {
 				display: flex;
 				align-items: center;
 				gap: 5em;
+				height: 100%;
+				width: unset;
+				position: unset;
+				padding: unset;
 
 				.nav-links {
 					display: flex;
 					gap: 4em;
+
+					.link {
+					}
 				}
 
 				.btn-wrap {
 					display: flex;
 					gap: 0.5em;
+					flex-direction: row;
+
+					.link {
+						border: none;
+
+						.link-btn {
+							cursor: pointer;
+							border: 0px solid rgb(187, 204, 0);
+							font-family: 'system-ui';
+							font-size: 14px;
+							color: rgb(255, 255, 255);
+							padding: 16px 30px;
+							transition: all;
+							width: 335px;
+							box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+							border-radius: 9px;
+							background: rgb(74, 74, 74);
+							--hover-borderSize: 0px;
+						}
+					}
 				}
+			}
+
+			.hamburger {
+				display: none;
 			}
 		}
 	}

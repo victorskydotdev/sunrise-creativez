@@ -5,7 +5,9 @@ const loadNavbarContent = () => {
 	const navTemplate = `
     <nav class="nav-container">
 				<div class="brand-logo">
-					<img src="${brandImg}" alt="">
+					<a href="/" >
+						<img src="${brandImg}" alt="">
+					</a>
 				</div>
 
 				<div class="wrap">
@@ -19,13 +21,14 @@ const loadNavbarContent = () => {
 						<button class="link">
 							<a href="#" class="link-btn">Contact</a>
 						</button>
-						<button class="link">
-							<a href="#" class="link-btn">Hire us</a>
-						</button>
+						
 					</div>
 				</div>
 
-				<!-- <div class="hamburger"></div> -->
+				<div class="hamburger">
+					<div class="block"></div>
+					<!-- <i class="fa-solid fa-bars"></i> -->
+				</div>
 			</nav>
       `;
 

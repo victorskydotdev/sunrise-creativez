@@ -1,0 +1,130 @@
+@import 'resets';
+
+.testimonial-section {
+	min-height: 70vh;
+	position: relative;
+
+	.positioned-quote-img {
+		position: absolute;
+		top: 15%;
+		left: -5%;
+		z-index: 1;
+
+		.quote {
+			height: 150px;
+		}
+
+		@media screen and (min-width: 43em) {
+			left: 3%;
+			top: 18%;
+		}
+
+		@media screen and (min-width: 62em) {
+			left: 10%;
+			top: 25%;
+		}
+	}
+
+	.container {
+		@include width-mixin();
+		padding-top: 3em;
+		position: relative;
+		z-index: 2;
+		margin-bottom: 7em;
+
+		.text-area {
+			margin-bottom: 5em;
+
+			.heading {
+				font-family: 'Poppins', sans-serif;
+				font-weight: 700;
+				max-width: 500px;
+				font-size: 32px;
+				margin-bottom: 0.5em;
+				text-transform: capitalize;
+				text-align: center;
+			}
+
+			@media screen and (min-width: 43em) {
+				.heading {
+					margin: 0 auto 0.5em auto;
+					text-align: center;
+
+					@media screen and (min-width: 62em) {
+						font-size: 3rem;
+						max-width: 700px;
+					}
+				}
+			}
+		}
+
+		.review-card {
+			// background: teal;
+
+			.text {
+				@include poppins-medium();
+				max-width: 500px;
+
+				@include text-mixin();
+
+				margin-bottom: 10em;
+			}
+
+			.identity {
+				text-align: right;
+
+				.name {
+					margin-bottom: 0.3em;
+					color: $dominantColor;
+				}
+			}
+
+			@media screen and (min-width: 62em) {
+				width: 65%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.our-clients {
+		position: relative;
+
+		.asterisk-two {
+			height: 180px;
+			width: 180px;
+			border-radius: 100%;
+			position: absolute;
+			top: 20%;
+			left: -5%;
+
+			img {
+				height: 100%;
+			}
+
+			@media screen and (min-width: 62em) {
+				top: -10%;
+				left: -2%;
+
+				height: 200px;
+				width: 200px;
+			}
+		}
+
+		.heading-title {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 700;
+			max-width: 500px;
+			font-size: 32px;
+			text-transform: capitalize;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 1em;
+		}
+
+		.container {
+			background: #f5f5f5;
+			height: 100px;
+			border-radius: 100px;
+		}
+	}
+}
