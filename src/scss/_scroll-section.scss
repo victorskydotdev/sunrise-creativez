@@ -1,0 +1,17 @@
+@import 'resets';
+
+.scroll-section {
+	background: red;
+	margin-bottom: 8em;
+
+	.container {
+		display: flex;
+		gap: 1em;
+
+		.box {
+			background: orange;
+			height: 300px;
+			width: 100%;
+		}
+	}
+}

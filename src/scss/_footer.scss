@@ -88,11 +88,17 @@
 			gap: 1em;
 			color: $light;
 
-			.brand-logo {
+			.footer-brand-logo {
 				height: 100px;
 				width: 100px;
-				background: $dominantColor;
+				// background: $dominantColor;
 				grid-area: brand-logo;
+
+				img {
+					height: 70px;
+					width: 70px;
+					object-fit: contain;
+				}
 			}
 
 			.copyright {
