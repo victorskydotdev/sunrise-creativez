@@ -3,17 +3,18 @@
 .stats-section {
 	min-height: 300px;
 	padding: 100px 0;
+	margin-bottom: 4em;
 
 	.container {
 		@include width-mixin();
 		display: grid;
-		gap: 3em;
+		gap: 4em;
 
 		.stats-wrap {
 			// background: orange;
 
 			.text-wrap {
-				margin-bottom: 1.5em;
+				margin-bottom: 2em;
 
 				.heading {
 					@include poppins-semibold();
@@ -70,6 +71,7 @@
 			width: 100%;
 			border-radius: 10px;
 			overflow: hidden;
+			display: none;
 
 			.img {
 				width: 100%;
@@ -79,12 +81,27 @@
 		}
 
 		@media screen and (min-width: 62em) {
-			width: 70%;
-			grid-template-columns: 400px 1fr;
+			width: 80%;
+			// grid-template-columns: 500px 1fr;
 			align-items: center;
 
+			.stats-wrap {
+				text-align: center;
+
+				.text-wrap {
+					.heading {
+						font-size: 40px;
+					}
+				}
+
+				.wrap {
+					justify-content: center;
+				}
+			}
+
 			.stats-thumbnail {
-				height: 500px;
+				height: 400px;
+				width: 500px;
 			}
 		}
 	}

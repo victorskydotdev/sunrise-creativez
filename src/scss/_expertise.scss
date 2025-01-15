@@ -1,8 +1,9 @@
 @import 'resets';
 
 .expertise-section {
-	padding-top: 2em;
+	padding: 6em 0;
 	margin-bottom: 5em;
+	background: linear-gradient(90deg, $dominantColor, $darK);
 
 	.container {
 		@include width-mixin();
@@ -10,16 +11,20 @@
 		.text-wrap {
 			.heading-title {
 				font-family: 'Poppins', sans-serif;
-				font-weight: 700;
+				font-weight: 800;
 				max-width: 500px;
 				font-size: 32px;
-				margin-bottom: 0.5em;
+
 				text-transform: capitalize;
+				color: $light;
+				line-height: 0;
+				margin-bottom: 1em !important;
 			}
 
 			.subhead {
 				@include text-mixin();
-				color: $colorTextPrimary;
+				// color: $colorTextPrimary;
+				color: $light;
 			}
 
 			.keypoints-wrap {
@@ -29,17 +34,18 @@
 				.card {
 					height: 300px;
 					width: 100%;
-					background: $darK;
-					border-radius: 40px;
+					// background: $darK;
+					border-radius: 10px;
 					position: relative;
 					overflow: hidden;
-					padding-top: 2em;
+					// padding-top: 2em;
 
 					.icon-wrap {
 						position: absolute;
 						width: 100px;
 						right: -7%;
 						bottom: -6%;
+						display: none;
 
 						.img {
 							height: 100%;
@@ -70,12 +76,8 @@
 
 				@media screen and (min-width: 62em) {
 					display: flex;
-					width: 80%;
 					margin: 0 auto;
-
-					.card {
-						padding: 2em 1.4em;
-					}
+					justify-content: space-between;
 				}
 			}
 
@@ -95,6 +97,17 @@
 					max-width: 550px;
 					margin: 0 auto 4em auto;
 				}
+			}
+		}
+
+		.intro-link {
+			text-align: center;
+			background: $accent-color;
+			padding: 2em;
+
+			@media screen and (min-width: 62em) {
+				width: 50%;
+				margin: 0 auto;
 			}
 		}
 	}

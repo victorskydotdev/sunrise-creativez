@@ -50,11 +50,10 @@
 		.wrap {
 			.heading {
 				position: relative;
-				font-size: clamp(2.5em, 5vw, 5em);
-				font-weight: 900;
-				// color: $dominantColor;
+				font-size: clamp(3em, 5vw, 5em);
 				color: $light;
 				@include poppins-semibold();
+				font-weight: 800;
 				letter-spacing: -2px;
 				margin-bottom: 0.2sem;
 				line-height: 0.9;
