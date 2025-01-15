@@ -1,4 +1,6 @@
 import smfestJosh2funny from '../assets/bg-imgs/smfest-josh2funny.jpg';
+import img2 from '../assets/bg-imgs/img2.jpg';
+import img3 from '../assets/bg-imgs/img3.jpg';
 import asteriskPrimaryImg from '../assets/asterisk-primary.png';
 import quoteImg from '../assets/quote.svg';
 import modAsteriskImg from '../assets/mod-asterisk.png';
@@ -9,6 +11,10 @@ const loadDomImages = () => {
 	const loadSmfestJosh2funny = () => {
 		return `
 			<img src="${smfestJosh2funny}" class="img" alt="smfest josh2funny">
+
+			<img src="${img2}" class="img" alt="smfest josh2funny">
+
+			<img src="${img3}" class="img" alt="smfest josh2funny">
 		`;
 	};
 
