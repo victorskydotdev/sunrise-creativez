@@ -1,0 +1,17 @@
+@import '../resets';
+
+.form-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgb(0, 0, 0, 0.7);
+	height: 100%;
+	width: 100%;
+	z-index: 6;
+	transform: translateY(100%);
+	transition: all 0.5s ease-in-out;
+}
+
+.show-modal {
+	transform: translateY(0);
+}

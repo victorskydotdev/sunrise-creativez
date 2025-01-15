@@ -26,8 +26,10 @@ const loadNavbarContent = () => {
 				</div>
 
 				<div class="hamburger">
-					<div class="block"></div>
-					<!-- <i class="fa-solid fa-bars"></i> -->
+					<div class="block">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+					
 				</div>
 			</nav>
       `;

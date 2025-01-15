@@ -56,12 +56,24 @@ a {
 }
 
 @mixin btn-mixin() {
-	background: $textColorSecondary;
+	background: $accent-color;
 	border-radius: 40px;
 	padding: 1.2em 1.4em;
 	color: $light;
 	display: inline-block;
 	font-weight: 500;
+	color: $dominantColor;
+	@include poppins-medium();
+	cursor: pointer;
+	border: none;
+	transition: all 0.3s ease-in-out;
+	font-size: 1rem;
+	z-index: 5;
+
+	&:hover {
+		background: rgba(255, 176, 4, 0.87);
+		color: $light;
+	}
 }
 
 @mixin text-mixin() {
